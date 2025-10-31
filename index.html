@@ -4,12 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Agente de Eventos IA</title>
+
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Vapi Widget -->
   <script src="https://unpkg.com/@vapi-ai/client-sdk-react/dist/embed/widget.umd.js" async></script>
+
+  <!-- Estilo personalizado para el widget -->
+  <style>
+    vapi-widget {
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+    }
+    @media (max-width: 768px) {
+      vapi-widget {
+        height: 90vh;
+        width: 10%;
+      }
+    }
+  </style>
 </head>
 
 <body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
-  <!-- Contenedor responsivo -->
   <div class="w-full max-w-md h-[80vh]">
     <vapi-widget
       public-key="549792d6-aa8a-4a45-b41c-bf356c28c61e"
@@ -22,6 +39,7 @@
       cta-button-text-color="#3d0640"
       border-radius="large"
       position="top-right"
+      size="compact"
       title="Agente Eventos IA"
       start-button-text="Start"
       end-button-text="End Call"
